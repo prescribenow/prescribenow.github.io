@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="/index.css/" /> -->
+    <link href="index.css" media="screen" rel="stylesheet" type="text/css" />
+    <title>Prescribe Now</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+    />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      .main-container {
+        display: flex;
+        margin-top: 60px;
+        min-height: 100vh;
+      }
+
+      .sidebar-arrow {
+        transition: transform 0.3s ease-out;
+      }
+
+      .collapsed {
+        transform: rotate(90deg);
+      }
+
+      .hr-1 {
+        width: 274px;
+        margin-left: 4px;
+      }
+
+      .hr-2 {
+        width: 256px;
+        margin-left: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo-container">
+        <img
+          src="https://app-stg.prescribenow.com/eportal/static/media/Logo.a2316b64e7988d01633ca067c9a64b2b.svg"
+          alt="Prescribe Now"
+        />
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="sidebar">
+        <div
+          class="sidebar-section"
+          onclick="toggleSection('section1', 'arrow-down-1')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-1"
+          />
+          Lab Orders
+        </div>
+        <div class="section-content" id="section1">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="creating-a-lab-order"
+            onclick="render('creating-a-lab-order.html', 'creating-a-lab-order')"
+          >
+            Creating a Lab Order
+          </div>
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          onclick="toggleSection('section2', 'arrow-down-2')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-2"
+          />
+          Prescription
+        </div>
+        <div class="section-content" id="section2">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="creating-a-medication-order"
+            onclick="toggleSection('section2-1', 'arrow-down-2-1'); render('creating-a-medication-order.html', 'creating-a-medication-order')"
+          >
+            <img
+              src="assets/right-arrow.png"
+              alt=""
+              class="sidebar-arrow"
+              id="arrow-down-2-1"
+            />
+            Create Medication Order
+          </div>
+          <div class="section-content" id="section2-1">
+            <div
+              class="sidebar-section sidebar-subsection-2"
+              id="medication-order"
+              onclick="render('medication-orders.html', 'medication-order')"
+            >
+              Medication Orders
+            </div>
+          </div>
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="patients"
+          onclick="toggleSection('section3', 'arrow-down-3'); render('patients.html', 'patients')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-3"
+          />
+          Patients
+        </div>
+        <div class="section-content" id="section3">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="advanced-search"
+            onclick="toggleSection('section3-1', 'arrow-down-3-1'); render('advanced-search.html', 'advanced-search')"
+          >
+            <img
+              src="assets/right-arrow.png"
+              alt=""
+              class="sidebar-arrow"
+              id="arrow-down-3-1"
+            />
+            Advanced Search
+          </div>
+
+          <div class="section-content" id="section3-1">
+            <div
+              class="sidebar-section sidebar-subsection-2"
+              id="demographics"
+              onclick="render('demographics.html', 'demographics')"
+            >
+              Demographics
+            </div>
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="on-selecting-patients-name"
+            onclick="render('on-selecting-patients-name.html', 'on-selecting-patients-name')"
+          >
+            Selecting Patient’s Name
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="patient-information-tab"
+            onclick="render('patient-information-tab.html', 'patient-information-tab')"
+          >
+            Patient Information Tab
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="messages-tab"
+            onclick="render('messages-tab.html', 'messages-tab')"
+          >
+            Messages Tab
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="prescription-tab"
+            onclick="render('prescription-tab.html', 'prescription-tab')"
+          >
+            Prescription Tab
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="encounter-tab"
+            onclick="render('encounter-tab.html', 'encounter-tab')"
+          >
+            Encounter Tab
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="labs-tab"
+            onclick="render('labs-tab.html', 'labs-tab')"
+          >
+            Labs Tab
+          </div>
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="imaging-orders-tab"
+          onclick="toggleSection('section10', 'arrow-down-10'); render('imaging-orders-tab.html', 'imaging-orders-tab')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-10"
+          />
+          Imaging Orders Tab
+        </div>
+        <div class="section-content" id="section10">
+          <div
+            class="sidebar-section sidebar-subsection-2"
+            id="requesting-an-imaging-order"
+            onclick="render('requesting-an-imaging-order.html', 'requesting-an-imaging-order')"
+          >
+            Request Imaging Order
+          </div>
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="patient-portal"
+          onclick="toggleSection('section4', 'arrow-down-4'); render('patient-portal.html', 'patient-portal')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-4"
+          />
+          Patient Portal
+        </div>
+        <div class="section-content" id="section4">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="home-screen"
+            onclick="render('home-screen.html', 'home-screen')"
+          >
+            Home Screen
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="appointments"
+            onclick="render('appointments.html', 'appointments')"
+          >
+            Appointments
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="prescriptions"
+            onclick="render('prescriptions.html', 'prescriptions')"
+          >
+            Prescriptions
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="booking-an-appointment"
+            onclick="render('booking-an-appointment.html', 'booking-an-appointment')"
+          >
+            Booking an Appointment
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="updating-patients-account"
+            onclick="render('updating-patients-account.html', 'updating-patients-account')"
+          >
+            Update Patient’s account
+          </div>
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="encounters"
+          onclick="toggleSection('section5', 'arrow-down-5'); render('encounters.html', 'encounters')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-5"
+          />
+          Encounters
+        </div>
+        <div class="section-content" id="section5">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="starting-an-encounter"
+            onclick="render('starting-an-encounter.html', 'starting-an-encounter')"
+          >
+            Starting an Encounter
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="reason-for-visit-tab"
+            onclick="render('reason-for-visit-tab.html', 'reason-for-visit-tab')"
+          >
+            Reason for Visit tab
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="vitals-tab"
+            onclick="render('vitals-tab.html', 'vitals-tab')"
+          >
+            Vitals tab
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="allergies-tab"
+            onclick="render('allergies-tab.html', 'allergies-tab')"
+          >
+            Allergies tab
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="history"
+            onclick="render('history.html', 'history')"
+          >
+            History
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="diagnosis-history"
+            onclick="render('diagnosis-history.html', 'diagnosis-history')"
+          >
+            Diagnosis History
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="medication-history"
+            onclick="render('medication-history.html', 'medication-history')"
+          >
+            Medication History
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="family-medication-history"
+            onclick="render('family-medication-history.html', 'family-medication-history')"
+          >
+            Family Medication History
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="surgical-history"
+            onclick="render('surgical-history.html', 'surgical-history')"
+          >
+            Surgical History
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="hospitalizations-history"
+            onclick="render('hospitalizations-history.html', 'hospitalizations-history')"
+          >
+            Hospitalizations History
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="social-history"
+            onclick="render('social-history.html', 'social-history')"
+          >
+            Social History
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="review-system"
+            onclick="render('review-system.html', 'review-system')"
+          >
+            Review System
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="physical-exam"
+            onclick="render('physical-exam.html', 'physical-exam')"
+          >
+            Physical Exam
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="assessment-and-plan"
+            onclick="render('assessment-and-plan.html', 'assessment-and-plan')"
+          >
+            Assessment & Plan
+          </div>
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="publishing-your-schedule"
+          onclick="render('publishing-your-schedule.html', 'publishing-your-schedule')"
+        >
+          Publishing your Schedule
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="booking-appointments"
+          onclick="render('booking-appointments.html', 'booking-appointments')"
+        >
+          Booking Appointments
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="soap-note"
+          onclick="render('soap-note.html', 'soap-note')"
+        >
+          SOAP Note
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="patient-onboarding"
+          onclick="render('patient-onboarding.html', 'patient-onboarding')"
+        >
+          Patient Onboarding
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="provider-onboarding"
+          onclick="toggleSection('section6', 'arrow-down-6'); render('provider-onboarding.html', 'provider-onboarding')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-6"
+          />
+          Provider Onboarding
+        </div>
+        <div class="section-content" id="section6">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="edit-user"
+            onclick="render('edit-user.html', 'edit-user')"
+          >
+            Edit User
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="reset-your-password"
+            onclick="render('reset-your-password.html', 'reset-your-password')"
+          >
+            Reset your Password
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="delete-user"
+            onclick="render('delete-user.html', 'delete-user')"
+          >
+            Delete User
+          </div>
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="calendar"
+          onclick="render('calendar.html', 'calendar')"
+        >
+          Calendar
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="facilities"
+          onclick="toggleSection('section7', 'arrow-down-7'); render('facilities.html', 'facilities')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-7"
+          />
+          Facilities
+        </div>
+        <div class="section-content" id="section7">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="adding-a-new-facility"
+            onclick="render('adding-a-new-facility.html', 'adding-a-new-facility')"
+          >
+            Adding a new Facility
+          </div>
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="user-roles"
+          onclick="render('user-roles.html', 'user-roles')"
+        >
+          User Roles
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="settings-tenant"
+          onclick="render('settings-tenant.html', 'settings-tenant')"
+        >
+          Settings: Tenant
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="invite-user"
+          onclick="render('invite-user.html', 'invite-user')"
+        >
+          Invite User
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="in-person-visit"
+          onclick="toggleSection('section8', 'arrow-down-8'); render('in-person-visit.html', 'in-person-visit')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-8"
+          />
+          In-Person Visit
+        </div>
+        <div class="section-content" id="section8">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="staff"
+            onclick="render('staff.html', 'staff')"
+          >
+            Staff
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="medical assistant"
+            onclick="render('medical assistant.html', 'medical assistant')"
+          >
+            Medical Assistant
+          </div>
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="reports"
+          onclick="toggleSection('section9', 'arrow-down-9'); render('reports.html', 'reports')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-9"
+          />
+          Reports
+        </div>
+        <div class="section-content" id="section9">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="huddle-sheet"
+            onclick="render('huddle-sheet.html', 'huddle-sheet')"
+          >
+            Huddle Sheet
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="setting-appointment-date"
+            onclick="render('setting-appointment-date.html', 'setting-appointment-date')"
+          >
+            Setting Appointment Date
+          </div>
+        </div>
+      </div>
+
+      <div class="content" id="content">
+        <h2>Main Content</h2>
+        <p>Default Content.</p>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        toggleSection("section1", "arrow-down-1");
+        render("creating-a-lab-order.html", "creating-a-lab-order");
+      };
+    </script>
+
+    <script>
+      function toggleSection(sectionId, arrowId) {
+        var sectionContent = document.getElementById(sectionId);
+        var arrow = document.getElementById(arrowId);
+        sectionContent.style.display =
+          sectionContent.style.display === "block" ? "none" : "block";
+        arrow.classList.toggle("collapsed");
+      }
+    </script>
+
+    <script>
+      function render(pagePath, targetId) {
+        var sectionContent = document.getElementById("content");
+        var sidebarSections = document.querySelectorAll(".sidebar-section");
+
+        // Reset the color of all sidebar sections to black
+        sidebarSections.forEach(function (section) {
+          section.style.color = "black";
+        });
+
+        // Change the color of the clicked section
+        var clickedSection = document.getElementById(targetId);
+        clickedSection.style.color = "#EC609B";
+
+        // Simulate loading content from the specified HTML page
+        fetch(pagePath)
+          .then((response) => response.text())
+          .then((html) => {
+            sectionContent.innerHTML = html;
+          });
+
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+    </script>
+  </body>
+</html>
