@@ -38,6 +38,11 @@
         width: 256px;
         margin-left: 4px;
       }
+
+      .hr-3 {
+        width: 238px;
+        margin-left: 4px;
+      }
     </style>
   </head>
   <body>
@@ -51,6 +56,123 @@
     </div>
     <div class="main-container">
       <div class="sidebar">
+        <div
+          class="sidebar-section"
+          id="patients"
+          onclick="toggleSection('section3', 'arrow-down-3'); render('patients.html', 'patients')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-3"
+          />
+          Patients
+        </div>
+        <div class="section-content" id="section3">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="advanced-search"
+            onclick="toggleSection('section3-1', 'arrow-down-3-1'); render('advanced-search.html', 'advanced-search')"
+          >
+            <img
+              src="assets/right-arrow.png"
+              alt=""
+              class="sidebar-arrow"
+              id="arrow-down-3-1"
+            />
+            Advanced Search
+          </div>
+
+          <div class="section-content" id="section3-1">
+            <div
+              class="sidebar-section sidebar-subsection-2"
+              id="demographics"
+              onclick="render('demographics.html', 'demographics')"
+            >
+              Demographics
+            </div>
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="on-selecting-patients-name"
+            onclick="render('on-selecting-patients-name.html', 'on-selecting-patients-name')"
+          >
+            Selecting Patient’s Name
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="patient-information-tab"
+            onclick="toggleSection('section11', 'arrow-down-11'); render('patient-information-tab.html', 'patient-information-tab')"
+          >
+            <img
+              src="assets/right-arrow.png"
+              alt=""
+              class="sidebar-arrow"
+              id="arrow-down-11"
+            />
+            Patient Information Tab
+          </div>
+
+          <div class="section-content" id="section11">
+            <div
+              class="sidebar-section sidebar-subsection-2"
+              id="payments"
+              onclick="render('payments.html', 'payments')"
+            >
+              Payments
+            </div>
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="messages-tab"
+            onclick="render('messages-tab.html', 'messages-tab')"
+          >
+            Messages Tab
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="prescription-tab"
+            onclick="render('prescription-tab.html', 'prescription-tab')"
+          >
+            Prescription Tab
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="encounter-tab"
+            onclick="render('encounter-tab.html', 'encounter-tab')"
+          >
+            Encounter Tab
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="labs-tab"
+            onclick="render('labs-tab.html', 'labs-tab')"
+          >
+            Labs Tab
+          </div>
+        </div>
+
+        <hr class="hr-1" />
+
         <div
           class="sidebar-section"
           onclick="toggleSection('section1', 'arrow-down-1')"
@@ -116,107 +238,6 @@
 
         <div
           class="sidebar-section"
-          id="patients"
-          onclick="toggleSection('section3', 'arrow-down-3'); render('patients.html', 'patients')"
-        >
-          <img
-            src="assets/right-arrow.png"
-            alt=""
-            class="sidebar-arrow"
-            id="arrow-down-3"
-          />
-          Patients
-        </div>
-        <div class="section-content" id="section3">
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="advanced-search"
-            onclick="toggleSection('section3-1', 'arrow-down-3-1'); render('advanced-search.html', 'advanced-search')"
-          >
-            <img
-              src="assets/right-arrow.png"
-              alt=""
-              class="sidebar-arrow"
-              id="arrow-down-3-1"
-            />
-            Advanced Search
-          </div>
-
-          <div class="section-content" id="section3-1">
-            <div
-              class="sidebar-section sidebar-subsection-2"
-              id="demographics"
-              onclick="render('demographics.html', 'demographics')"
-            >
-              Demographics
-            </div>
-          </div>
-
-          <hr class="hr-2" />
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="on-selecting-patients-name"
-            onclick="render('on-selecting-patients-name.html', 'on-selecting-patients-name')"
-          >
-            Selecting Patient’s Name
-          </div>
-
-          <hr class="hr-2" />
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="patient-information-tab"
-            onclick="render('patient-information-tab.html', 'patient-information-tab')"
-          >
-            Patient Information Tab
-          </div>
-
-          <hr class="hr-2" />
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="messages-tab"
-            onclick="render('messages-tab.html', 'messages-tab')"
-          >
-            Messages Tab
-          </div>
-
-          <hr class="hr-2" />
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="prescription-tab"
-            onclick="render('prescription-tab.html', 'prescription-tab')"
-          >
-            Prescription Tab
-          </div>
-
-          <hr class="hr-2" />
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="encounter-tab"
-            onclick="render('encounter-tab.html', 'encounter-tab')"
-          >
-            Encounter Tab
-          </div>
-
-          <hr class="hr-2" />
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="labs-tab"
-            onclick="render('labs-tab.html', 'labs-tab')"
-          >
-            Labs Tab
-          </div>
-        </div>
-
-        <hr class="hr-1" />
-
-        <div
-          class="sidebar-section"
           id="imaging-orders-tab"
           onclick="toggleSection('section10', 'arrow-down-10'); render('imaging-orders-tab.html', 'imaging-orders-tab')"
         >
@@ -226,7 +247,7 @@
             class="sidebar-arrow"
             id="arrow-down-10"
           />
-          Imaging Orders Tab
+          Imaging Orders
         </div>
         <div class="section-content" id="section10">
           <div
@@ -235,71 +256,6 @@
             onclick="render('requesting-an-imaging-order.html', 'requesting-an-imaging-order')"
           >
             Request Imaging Order
-          </div>
-        </div>
-
-        <hr class="hr-1" />
-
-        <div
-          class="sidebar-section"
-          id="patient-portal"
-          onclick="toggleSection('section4', 'arrow-down-4'); render('patient-portal.html', 'patient-portal')"
-        >
-          <img
-            src="assets/right-arrow.png"
-            alt=""
-            class="sidebar-arrow"
-            id="arrow-down-4"
-          />
-          Patient Portal
-        </div>
-        <div class="section-content" id="section4">
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="home-screen"
-            onclick="render('home-screen.html', 'home-screen')"
-          >
-            Home Screen
-          </div>
-
-          <hr class="hr-2" />
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="appointments"
-            onclick="render('appointments.html', 'appointments')"
-          >
-            Appointments
-          </div>
-
-          <hr class="hr-2" />
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="prescriptions"
-            onclick="render('prescriptions.html', 'prescriptions')"
-          >
-            Prescriptions
-          </div>
-
-          <hr class="hr-2" />
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="booking-an-appointment"
-            onclick="render('booking-an-appointment.html', 'booking-an-appointment')"
-          >
-            Booking an Appointment
-          </div>
-
-          <hr class="hr-2" />
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="updating-patients-account"
-            onclick="render('updating-patients-account.html', 'updating-patients-account')"
-          >
-            Update Patient’s account
           </div>
         </div>
 
@@ -321,20 +277,10 @@
         <div class="section-content" id="section5">
           <div
             class="sidebar-section sidebar-subsection"
-            id="starting-an-encounter"
-            onclick="render('starting-an-encounter.html', 'starting-an-encounter')"
-          >
-            Starting an Encounter
-          </div>
-
-          <hr class="hr-2" />
-
-          <div
-            class="sidebar-section sidebar-subsection"
             id="reason-for-visit-tab"
             onclick="render('reason-for-visit-tab.html', 'reason-for-visit-tab')"
           >
-            Reason for Visit tab
+            Reason for Visit Tab
           </div>
 
           <hr class="hr-2" />
@@ -344,7 +290,7 @@
             id="vitals-tab"
             onclick="render('vitals-tab.html', 'vitals-tab')"
           >
-            Vitals tab
+            Vitals Tab
           </div>
 
           <hr class="hr-2" />
@@ -354,7 +300,7 @@
             id="allergies-tab"
             onclick="render('allergies-tab.html', 'allergies-tab')"
           >
-            Allergies tab
+            Allergies Tab
           </div>
 
           <hr class="hr-2" />
@@ -362,69 +308,75 @@
           <div
             class="sidebar-section sidebar-subsection"
             id="history"
-            onclick="render('history.html', 'history')"
+            onclick="toggleSection('section5-1', 'arrow-down-5-1'); render('history.html', 'history')"
           >
-            History
+            <img
+              src="assets/right-arrow.png"
+              alt=""
+              class="sidebar-arrow"
+              id="arrow-down-5-1"
+            />
+            History Tab
+          </div>
+
+          <div class="section-content" id="section5-1">
+            <div
+              class="sidebar-section sidebar-subsection-2"
+              id="medication-history"
+              onclick="render('medication-history.html', 'medication-history')"
+            >
+              Medication
+            </div>
+
+            <hr class="hr-3" />
+
+            <div
+              class="sidebar-section sidebar-subsection-2"
+              id="family-medication-history"
+              onclick="render('family-medication-history.html', 'family-medication-history')"
+            >
+              Family Medication
+            </div>
+
+            <hr class="hr-3" />
+
+            <div
+              class="sidebar-section sidebar-subsection-2"
+              id="surgical-history"
+              onclick="render('surgical-history.html', 'surgical-history')"
+            >
+              Surgical
+            </div>
+
+            <hr class="hr-3" />
+
+            <div
+              class="sidebar-section sidebar-subsection-2"
+              id="hospitalizations-history"
+              onclick="render('hospitalizations-history.html', 'hospitalizations-history')"
+            >
+              Hospitalizations
+            </div>
+
+            <hr class="hr-3" />
+
+            <div
+              class="sidebar-section sidebar-subsection-2"
+              id="social-history"
+              onclick="render('social-history.html', 'social-history')"
+            >
+              Social
+            </div>
           </div>
 
           <hr class="hr-2" />
 
           <div
-            class="sidebar-section sidebar-subsection"
+            class="sidebar-section sidebar-subsection-2"
             id="diagnosis-history"
             onclick="render('diagnosis-history.html', 'diagnosis-history')"
           >
-            Diagnosis History
-          </div>
-
-          <hr class="hr-2" />
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="medication-history"
-            onclick="render('medication-history.html', 'medication-history')"
-          >
-            Medication History
-          </div>
-
-          <hr class="hr-2" />
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="family-medication-history"
-            onclick="render('family-medication-history.html', 'family-medication-history')"
-          >
-            Family Medication History
-          </div>
-
-          <hr class="hr-2" />
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="surgical-history"
-            onclick="render('surgical-history.html', 'surgical-history')"
-          >
-            Surgical History
-          </div>
-
-          <hr class="hr-2" />
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="hospitalizations-history"
-            onclick="render('hospitalizations-history.html', 'hospitalizations-history')"
-          >
-            Hospitalizations History
-          </div>
-
-          <hr class="hr-2" />
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="social-history"
-            onclick="render('social-history.html', 'social-history')"
-          >
-            Social History
+            Diagnosis
           </div>
 
           <hr class="hr-2" />
@@ -434,7 +386,7 @@
             id="review-system"
             onclick="render('review-system.html', 'review-system')"
           >
-            Review System
+            Review System Tab
           </div>
 
           <hr class="hr-2" />
@@ -444,7 +396,7 @@
             id="physical-exam"
             onclick="render('physical-exam.html', 'physical-exam')"
           >
-            Physical Exam
+            Physical Exam Tab
           </div>
 
           <hr class="hr-2" />
@@ -452,9 +404,25 @@
           <div
             class="sidebar-section sidebar-subsection"
             id="assessment-and-plan"
-            onclick="render('assessment-and-plan.html', 'assessment-and-plan')"
+            onclick="toggleSection('section5-2', 'arrow-down-5-2');render('assessment-and-plan.html', 'assessment-and-plan')"
           >
-            Assessment & Plan
+            <img
+              src="assets/right-arrow.png"
+              alt=""
+              class="sidebar-arrow"
+              id="arrow-down-5-2"
+            />
+            Assessment & Plan Tab
+          </div>
+
+          <div class="section-content" id="section5-2">
+            <div
+              class="sidebar-section sidebar-subsection-2"
+              id="signing-an-encounter"
+              onclick="render('signing-an-encounter.html', 'signing-an-encounter')"
+            >
+              Signing an Encounter
+            </div>
           </div>
         </div>
 
@@ -677,6 +645,71 @@
             Setting Appointment Date
           </div>
         </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="patient-portal"
+          onclick="toggleSection('section4', 'arrow-down-4'); render('patient-portal.html', 'patient-portal')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-4"
+          />
+          Patient Portal
+        </div>
+        <div class="section-content" id="section4">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="home-screen"
+            onclick="render('home-screen.html', 'home-screen')"
+          >
+            Home Screen
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="appointments"
+            onclick="render('appointments.html', 'appointments')"
+          >
+            Appointments
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="prescriptions"
+            onclick="render('prescriptions.html', 'prescriptions')"
+          >
+            Prescriptions
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="booking-an-appointment"
+            onclick="render('booking-an-appointment.html', 'booking-an-appointment')"
+          >
+            Booking an Appointment
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="updating-patients-account"
+            onclick="render('updating-patients-account.html', 'updating-patients-account')"
+          >
+            Update Patient’s account
+          </div>
+        </div>
       </div>
 
       <div class="content" id="content">
@@ -687,8 +720,8 @@
 
     <script>
       window.onload = function () {
-        toggleSection("section1", "arrow-down-1");
-        render("creating-a-lab-order.html", "creating-a-lab-order");
+        toggleSection("section3", "arrow-down-3");
+        render("patients.html", "patients");
       };
     </script>
 
