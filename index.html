@@ -58,8 +58,7 @@
       <div class="sidebar">
         <div
           class="sidebar-section"
-          id="patients"
-          onclick="toggleSection('section3', 'arrow-down-3'); render('patients.html', 'patients')"
+          onclick="toggleSection('section3', 'arrow-down-3');"
         >
           <img
             src="assets/right-arrow.png"
@@ -71,9 +70,18 @@
         </div>
         <div class="section-content" id="section3">
           <div
+            class="sidebar-section sidebar-subsection-2"
+            id="patients"
+            onclick=" render('patients.html', 'patients')"
+          >
+            Overview
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
             class="sidebar-section sidebar-subsection"
-            id="advanced-search"
-            onclick="toggleSection('section3-1', 'arrow-down-3-1'); render('advanced-search.html', 'advanced-search')"
+            onclick="toggleSection('section3-1', 'arrow-down-3-1');"
           >
             <img
               src="assets/right-arrow.png"
@@ -85,6 +93,15 @@
           </div>
 
           <div class="section-content" id="section3-1">
+            <div
+              class="sidebar-section sidebar-subsection-2"
+              id="advanced-search"
+              onclick=" render('advanced-search.html', 'advanced-search')"
+            >
+              Overview
+            </div>
+
+            <hr class="hr-3" />
             <div
               class="sidebar-section sidebar-subsection-2"
               id="demographics"
@@ -108,8 +125,7 @@
 
           <div
             class="sidebar-section sidebar-subsection"
-            id="patient-information-tab"
-            onclick="toggleSection('section11', 'arrow-down-11'); render('patient-information-tab.html', 'patient-information-tab')"
+            onclick="toggleSection('section11', 'arrow-down-11');"
           >
             <img
               src="assets/right-arrow.png"
@@ -121,6 +137,16 @@
           </div>
 
           <div class="section-content" id="section11">
+            <div
+              class="sidebar-section sidebar-subsection-2"
+              id="patient-information-tab"
+              onclick=" render('patient-information-tab.html', 'patient-information-tab')"
+            >
+              Overview
+            </div>
+
+            <hr class="hr-3" />
+
             <div
               class="sidebar-section sidebar-subsection-2"
               id="payments"
@@ -212,8 +238,7 @@
         <div class="section-content" id="section2">
           <div
             class="sidebar-section sidebar-subsection"
-            id="creating-a-medication-order"
-            onclick="toggleSection('section2-1', 'arrow-down-2-1'); render('creating-a-medication-order.html', 'creating-a-medication-order')"
+            onclick="toggleSection('section2-1', 'arrow-down-2-1');"
           >
             <img
               src="assets/right-arrow.png"
@@ -223,7 +248,18 @@
             />
             Create Medication Order
           </div>
+
           <div class="section-content" id="section2-1">
+            <div
+              class="sidebar-section sidebar-subsection-2"
+              id="creating-a-medication-order"
+              onclick=" render('creating-a-medication-order.html', 'creating-a-medication-order')"
+            >
+              Overview
+            </div>
+
+            <hr class="hr-2" />
+
             <div
               class="sidebar-section sidebar-subsection-2"
               id="medication-order"
@@ -238,8 +274,7 @@
 
         <div
           class="sidebar-section"
-          id="imaging-orders-tab"
-          onclick="toggleSection('section10', 'arrow-down-10'); render('imaging-orders-tab.html', 'imaging-orders-tab')"
+          onclick="toggleSection('section10', 'arrow-down-10');"
         >
           <img
             src="assets/right-arrow.png"
@@ -250,6 +285,16 @@
           Imaging Orders
         </div>
         <div class="section-content" id="section10">
+          <div
+            class="sidebar-section sidebar-subsection-2"
+            id="imaging-orders-tab"
+            onclick=" render('imaging-orders-tab.html', 'imaging-orders-tab')"
+          >
+            Overview
+          </div>
+
+          <hr class="hr-2" />
+
           <div
             class="sidebar-section sidebar-subsection-2"
             id="requesting-an-imaging-order"
@@ -263,8 +308,7 @@
 
         <div
           class="sidebar-section"
-          id="encounters"
-          onclick="toggleSection('section5', 'arrow-down-5'); render('encounters.html', 'encounters')"
+          onclick="toggleSection('section5', 'arrow-down-5')"
         >
           <img
             src="assets/right-arrow.png"
@@ -275,6 +319,16 @@
           Encounters
         </div>
         <div class="section-content" id="section5">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="encounters"
+            onclick="render('encounters.html', 'encounters')"
+          >
+            Overview
+          </div>
+
+          <hr class="hr-2" />
+
           <div
             class="sidebar-section sidebar-subsection"
             id="reason-for-visit-tab"
@@ -307,8 +361,7 @@
 
           <div
             class="sidebar-section sidebar-subsection"
-            id="history"
-            onclick="toggleSection('section5-1', 'arrow-down-5-1'); render('history.html', 'history')"
+            onclick="toggleSection('section5-1', 'arrow-down-5-1');"
           >
             <img
               src="assets/right-arrow.png"
@@ -320,6 +373,16 @@
           </div>
 
           <div class="section-content" id="section5-1">
+            <div
+              class="sidebar-section sidebar-subsection-2"
+              id="history"
+              onclick=" render('history.html', 'history')"
+            >
+              Overview
+            </div>
+
+            <hr class="hr-3" />
+
             <div
               class="sidebar-section sidebar-subsection-2"
               id="medication-history"
@@ -376,7 +439,7 @@
             id="diagnosis-history"
             onclick="render('diagnosis-history.html', 'diagnosis-history')"
           >
-            Diagnosis
+            Diagnosis Tab
           </div>
 
           <hr class="hr-2" />
@@ -403,8 +466,7 @@
 
           <div
             class="sidebar-section sidebar-subsection"
-            id="assessment-and-plan"
-            onclick="toggleSection('section5-2', 'arrow-down-5-2');render('assessment-and-plan.html', 'assessment-and-plan')"
+            onclick="toggleSection('section5-2', 'arrow-down-5-2');"
           >
             <img
               src="assets/right-arrow.png"
@@ -418,11 +480,56 @@
           <div class="section-content" id="section5-2">
             <div
               class="sidebar-section sidebar-subsection-2"
+              id="assessment-and-plan"
+              onclick="render('assessment-and-plan.html', 'assessment-and-plan')"
+            >
+              Overview
+            </div>
+
+            <hr class="hr-2" />
+
+            <div
+              class="sidebar-section sidebar-subsection-2"
               id="signing-an-encounter"
               onclick="render('signing-an-encounter.html', 'signing-an-encounter')"
             >
               Signing an Encounter
             </div>
+          </div>
+        </div>
+
+        <hr class="hr-1" />
+
+        <div
+          class="sidebar-section"
+          id="in-person-visit"
+          onclick="toggleSection('section8', 'arrow-down-8'); render('in-person-visit.html', 'in-person-visit')"
+        >
+          <img
+            src="assets/right-arrow.png"
+            alt=""
+            class="sidebar-arrow"
+            id="arrow-down-8"
+          />
+          In-Person Visit
+        </div>
+        <div class="section-content" id="section8">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="staff"
+            onclick="render('staff.html', 'staff')"
+          >
+            Staff
+          </div>
+
+          <hr class="hr-2" />
+
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="medical assistant"
+            onclick="render('medical assistant.html', 'medical assistant')"
+          >
+            Medical Assistant
           </div>
         </div>
 
@@ -482,6 +589,15 @@
           Provider Onboarding
         </div>
         <div class="section-content" id="section6">
+          <div
+            class="sidebar-section sidebar-subsection"
+            id="invite-user"
+            onclick="render('invite-user.html', 'invite-user')"
+          >
+            Invite User
+          </div>
+
+          <hr class="hr-2" />
           <div
             class="sidebar-section sidebar-subsection"
             id="edit-user"
@@ -563,52 +679,7 @@
           id="settings-tenant"
           onclick="render('settings-tenant.html', 'settings-tenant')"
         >
-          Settings: Tenant
-        </div>
-
-        <hr class="hr-1" />
-
-        <div
-          class="sidebar-section"
-          id="invite-user"
-          onclick="render('invite-user.html', 'invite-user')"
-        >
-          Invite User
-        </div>
-
-        <hr class="hr-1" />
-
-        <div
-          class="sidebar-section"
-          id="in-person-visit"
-          onclick="toggleSection('section8', 'arrow-down-8'); render('in-person-visit.html', 'in-person-visit')"
-        >
-          <img
-            src="assets/right-arrow.png"
-            alt=""
-            class="sidebar-arrow"
-            id="arrow-down-8"
-          />
-          In-Person Visit
-        </div>
-        <div class="section-content" id="section8">
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="staff"
-            onclick="render('staff.html', 'staff')"
-          >
-            Staff
-          </div>
-
-          <hr class="hr-2" />
-
-          <div
-            class="sidebar-section sidebar-subsection"
-            id="medical assistant"
-            onclick="render('medical assistant.html', 'medical assistant')"
-          >
-            Medical Assistant
-          </div>
+          Tenant Settings
         </div>
 
         <hr class="hr-1" />
@@ -635,7 +706,7 @@
             Huddle Sheet
           </div>
 
-          <hr class="hr-2" />
+          <!-- <hr class="hr-2" />
 
           <div
             class="sidebar-section sidebar-subsection"
@@ -643,7 +714,7 @@
             onclick="render('setting-appointment-date.html', 'setting-appointment-date')"
           >
             Setting Appointment Date
-          </div>
+          </div> -->
         </div>
 
         <hr class="hr-1" />
