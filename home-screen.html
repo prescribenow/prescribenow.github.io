@@ -35,7 +35,13 @@
         with two navigation buttons. Clicking on the navigation buttons (right
         and left) allows a patient to peruse all of his or her appointments and
         their details. If ‘View All’ (adjacent to the navigation buttons) is
-        clicked, you will redirect to @Appointments page.
+        clicked, you will redirect to @<span
+          class="link-span"
+          id="appointments"
+          onclick="render('appointments.html', 'appointments')"
+          >Appointments</span
+        >
+        page.
       </p>
     </div>
 
@@ -73,7 +79,13 @@
       <p class="info">
         Recent patient’s prescriptions are displayed under ‘Prescriptions’
         heading for easy reading. Clicking on ‘View all’ will redirect you to
-        @Prescriptions page.
+        @<span
+          class="link-span"
+          id="prescriptions"
+          onclick="render('prescriptions.html', 'prescriptions')"
+          >Prescriptions</span
+        >
+        page.
       </p>
     </div>
 
@@ -90,7 +102,13 @@
       <div class="text-container">
         <p class="info">
           At the upper right corner is the ‘New Appointment’ button. Refer to
-          @Booking an Appointment for its details.
+          @<span
+            class="link-span"
+            id="booking-an-appointment"
+            onclick="render('booking-an-appointment.html', 'booking-an-appointment')"
+            >Booking an Appointment</span
+          >
+          for its details.
         </p>
       </div>
     </div>

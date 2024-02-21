@@ -16,7 +16,12 @@
         Encounters arranged against a patient’s name are tiled here for the
         provider to see. A provider may click on ‘Resume’ to carry forth a
         patient encounter from the point it was discontinued. To understand what
-        an ‘Encounter’ is, please refer to <a href="#">Encounters</a>.
+        an ‘Encounter’ is, please refer to @<span
+        class="link-span"
+        id="encounters"
+        onclick="toggleSection('section5', 'arrow-down-5'); render('encounters.html', 'encounters')"
+        >Encounters</span
+      ></a>.
       </p>
     </div>
 
@@ -33,9 +38,15 @@
     <div class="text-container">
       <p class="info">
         If you click on ‘View All’ at the upper right corner, it will take you
-        to Encounters Tab. Refer to @Encounters Tab. The patient information tab
-        contains basic information about a patient, including date of birth,
-        age, biological sex, address, phone, etc.
+        to Encounters Tab. Refer to @<span
+          class="link-span"
+          id="encounter-tab"
+          onclick="render('encounter-tab.html', 'encounter-tab')"
+          >Encounters</span
+        >
+        Tab. The patient information tab contains basic information about a
+        patient, including date of birth, age, biological sex, address, phone,
+        etc.
       </p>
     </div>
 
@@ -62,8 +73,15 @@
       <p class="info">
         Patient Information can be edited by selecting the ‘Edit’ link. A new
         window opens titled ‘Edit Patient’. Input all changes that are required.
-        Refer to @Patient Onboarding for details of these fields. Click on
-        ‘Update’ to confirm and save the modifications made.
+        Refer to @<span
+          class="link-span"
+          id="patient-onboarding"
+          onclick="render('patient-onboarding.html',
+          'patient-onboarding')"
+          >Patient Onboarding</span
+        >
+        for details of these fields. Click on ‘Update’ to confirm and save the
+        modifications made.
       </p>
     </div>
 

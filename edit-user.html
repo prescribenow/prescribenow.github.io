@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit User</title>
     <link href="index.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="index.js" defer></script>
   </head>
   <body>
     <!-- *********** -->
@@ -38,7 +39,12 @@
     <!-- *********** -->
     <div class="text-container">
       <p class="info">
-        For details of each field, refer to @Provider Onboarding.
+        For details of each field, refer to @<span
+          class="link-span"
+          id="provider-onboarding"
+          onclick="toggleSection('section6', 'arrow-down-6'); render('provider-onboarding.html', 'provider-onboarding')"
+          >Provider Onboarding</span
+        >.
       </p>
     </div>
 
