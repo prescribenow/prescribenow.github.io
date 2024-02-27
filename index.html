@@ -59,10 +59,10 @@
         <!-- <h2 class="user-manual-heading">User Manual</h2> -->
       </div>
       <div class="links-container">
-        <a href="https://www.linkedin.com/company/prescribenow/"
+        <a href="https://www.linkedin.com/company/prescribenow/" target="_blank"
           ><img src="assets/linkedin.png" alt="linkedin"
         /></a>
-        <a href="https://www.prescribenow.com/"
+        <a href="https://www.prescribenow.com/" target="_blank"
           ><img src="assets/web.png" alt="website"
         /></a>
       </div>
@@ -728,7 +728,6 @@
 
         <div
           class="sidebar-section"
-          id="reports"
           onclick="toggleSection('section9', 'arrow-down-9'); "
         >
           <img
@@ -845,7 +844,9 @@
       </div>
 
       <div class="content" id="content">
+        <h1 class="landing-heading">Welcome to Prescribenow User Guide</h1>
         <div class="landing-content">
+          <div class="landing-header"></div>
           <div class="main-content-grid">
             <div class="main-content-row">
               <div
@@ -859,19 +860,41 @@
                 />
                 Patients
               </div>
-
               <div
                 class="main-content-cell"
-                onclick="render('calendar.html', 'calendar')"
+                onclick="toggleSection('section1', 'arrow-down-1'); render('creating-a-lab-order.html', 'creating-a-lab-order')"
               >
                 <img
                   class="landing-content-icon"
-                  src="assets/landing-content-icons/calendar.png"
-                  alt="patient"
+                  src="assets/landing-content-icons/lab-order.png"
+                  alt="lab-order"
                 />
-                Calendar
+                Lab Order
               </div>
-
+              <div
+                class="main-content-cell"
+                onclick="toggleSection('section2', 'arrow-down-2');toggleSection('section2-1', 'arrow-down-2-1');  render('creating-a-medication-order.html', 'creating-a-medication-order')"
+              >
+                <img
+                  class="landing-content-icon"
+                  src="assets/landing-content-icons/prescription.png"
+                  alt="prescriptions"
+                />
+                Prescriptions
+              </div>
+              <div
+                class="main-content-cell"
+                onclick="toggleSection('section10', 'arrow-down-10'); render('imaging-orders-tab.html', 'imaging-orders-tab')"
+              >
+                <img
+                  class="landing-content-icon"
+                  src="assets/landing-content-icons/imaging-order.png"
+                  alt="prescriptions"
+                />
+                Imaging Order
+              </div>
+            </div>
+            <div class="main-content-row">
               <div
                 class="main-content-cell"
                 onclick="toggleSection('section5', 'arrow-down-5'); render('encounters.html', 'encounters')"
@@ -883,8 +906,18 @@
                 />
                 Encounters
               </div>
-            </div>
-            <!-- <div class="main-content-row">
+              <div
+                class="main-content-cell"
+                onclick="toggleSection('section8', 'arrow-down-8'); render('in-person-visit.html', 'in-person-visit')"
+              >
+                <img
+                  class="landing-content-icon"
+                  src="assets/landing-content-icons/in-person-visit.png"
+                  alt="in-person-visit"
+                />
+                In-Person Visit
+              </div>
+
               <div
                 class="main-content-cell"
                 onclick="render('booking-appointments.html', 'booking-appointments')"
@@ -894,112 +927,70 @@
                   src="assets/landing-content-icons/appointment.png"
                   alt="booking-appointments"
                 />
-                <span style="text-align: center">Booking Appointment</span>
+                Booking Appointments
               </div>
+
               <div
                 class="main-content-cell"
-                onclick="toggleSection('section3', 'arrow-down-3'); render('patients.html', 'patients')"
+                onclick="toggleSection('section7', 'arrow-down-7');  render('facilities.html', 'facilities')"
               >
                 <img
                   class="landing-content-icon"
-                  src="assets/landing-content-icons/patient.png"
-                  alt="patient"
+                  src="assets/landing-content-icons/facilities.png"
+                  alt="booking-appointments"
                 />
-                Patients
-              </div>
-              <div
-                class="main-content-cell"
-                onclick="toggleSection('section3', 'arrow-down-3'); render('patients.html', 'patients')"
-              >
-                <img
-                  class="landing-content-icon"
-                  src="assets/landing-content-icons/patient.png"
-                  alt="patient"
-                />
-                Patients
+                Facilities
               </div>
             </div>
             <div class="main-content-row">
               <div
                 class="main-content-cell"
-                onclick="toggleSection('section3', 'arrow-down-3'); render('patients.html', 'patients')"
+                onclick="render('user-roles.html', 'user-roles')"
               >
                 <img
                   class="landing-content-icon"
-                  src="assets/landing-content-icons/patient.png"
-                  alt="patient"
+                  src="assets/landing-content-icons/user-roles.png"
+                  alt="user-roles"
                 />
-                Patients
+                User Roles
               </div>
               <div
                 class="main-content-cell"
-                onclick="toggleSection('section3', 'arrow-down-3'); render('patients.html', 'patients')"
+                onclick="render('settings-tenant.html', 'settings-tenant')"
               >
                 <img
                   class="landing-content-icon"
-                  src="assets/landing-content-icons/patient.png"
-                  alt="patient"
+                  src="assets/landing-content-icons/setting.png"
+                  alt="settings-tenant"
                 />
-                Patients
+                Tenant Settings
               </div>
               <div
                 class="main-content-cell"
-                onclick="toggleSection('section3', 'arrow-down-3'); render('patients.html', 'patients')"
+                onclick="toggleSection('section9', 'arrow-down-9');render('reports.html', 'reports')"
               >
                 <img
                   class="landing-content-icon"
-                  src="assets/landing-content-icons/patient.png"
-                  alt="patient"
+                  src="assets/landing-content-icons/report.png"
+                  alt="reports"
                 />
-                Patients
+                Reports
               </div>
-            </div> -->
+              <div
+                class="main-content-cell"
+                onclick="toggleSection('section4', 'arrow-down-4'); render('patient-portal.html', 'patient-portal')"
+              >
+                <img
+                  class="landing-content-icon"
+                  src="assets/landing-content-icons/patient-portal.png"
+                  alt="prescriptions"
+                />
+                Patient Portal
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- <script>
-      // window.onload = function () {
-      //   toggleSection("section3", "arrow-down-3");
-      //   render("patients.html", "patients");
-      // };
-    </script>
-
-    <script>
-      function toggleSection(sectionId, arrowId) {
-        var sectionContent = document.getElementById(sectionId);
-        var arrow = document.getElementById(arrowId);
-        sectionContent.style.display =
-          sectionContent.style.display === "block" ? "none" : "block";
-        arrow.classList.toggle("collapsed");
-      }
-    </script>
-
-    <script>
-      function render(pagePath, targetId) {
-        var sectionContent = document.getElementById("content");
-        var sidebarSections = document.querySelectorAll(".sidebar-section");
-
-        // Reset the color of all sidebar sections to black
-        sidebarSections.forEach(function (section) {
-          section.style.color = "black";
-        });
-
-        // Change the color of the clicked section
-        var clickedSection = document.getElementById(targetId);
-        clickedSection.style.color = "#EC609B";
-
-        // Simulate loading content from the specified HTML page
-        fetch(pagePath)
-          .then((response) => response.text())
-          .then((html) => {
-            sectionContent.innerHTML = html;
-          });
-
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-      }
-    </script> -->
   </body>
 </html>

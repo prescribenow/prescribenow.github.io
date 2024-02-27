@@ -198,7 +198,6 @@ body {
 }
 
 .landing-content {
-  height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -206,8 +205,8 @@ body {
 }
 
 .main-content-grid {
-  width: 600px;
-  height: 380px;
+  width: 900px;
+  height: 420px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -221,7 +220,8 @@ body {
 }
 
 .main-content-cell {
-  width: 120px;
+  width: 210px;
+  font-size: 14px;
   height: 120px;
   display: flex;
   flex-direction: column;
@@ -252,4 +252,11 @@ body {
 
 .link-span:hover {
   color: #d4d1d1;
+}
+
+.landing-heading {
+  text-align: center;
+  color: #ec609b;
+  margin-top: 40px;
+  margin-bottom: 44px;
 }
